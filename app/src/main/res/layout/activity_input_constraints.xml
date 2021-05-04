@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InputConstraintsActivity">
+
+    <TextView
+        android:id="@+id/inputConstraintsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/input_constraints"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/ucAlphaCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uppercase Alphabets(A-Z)"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputConstraintsTV" />
+
+    <CheckBox
+        android:id="@+id/lcAlphaCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lowercase Alphabets(a-z)"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ucAlphaCB" />
+
+    <CheckBox
+        android:id="@+id/digitsCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/digits_0_9"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lcAlphaCB" />
+
+    <CheckBox
+        android:id="@+id/mathCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mathematical_operators"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/digitsCB" />
+
+    <CheckBox
+        android:id="@+id/otherSymCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/other_symbols"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mathCB" />
+
+    <Button
+        android:id="@+id/takeInputBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/take_input"
+        android:onClick="takeInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otherSymCB" />
+
+    <TextView
+        android:id="@+id/returnStringTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toEndOf="@+id/returnStringShowTV"
+        app:layout_constraintTop_toBottomOf="@+id/takeInputBtn" />
+
+    <TextView
+        android:id="@+id/returnStringShowTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Input Value"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/takeInputBtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

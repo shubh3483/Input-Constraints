@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Input Constraints</string>
+    <string name="enter_input">Input Here</string>
+    <string name="enter_input_tv">Enter input</string>
+    <string name="save">SAVE</string>
+    <string name="input_constraints">Input Constraints</string>
+    <string name="other_symbols">Other Symbols(#,$ etc.)</string>
+    <string name="mathematical_operators">Mathematical Operators(+,-,/,*,%)</string>
+    <string name="digits_0_9">Digits(0-9)</string>
+    <string name="take_input">TAKE INPUT</string>
+</resources>
