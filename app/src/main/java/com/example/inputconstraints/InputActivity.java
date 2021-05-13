@@ -2,10 +2,12 @@ package com.example.inputconstraints;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.inputconstraints.databinding.ActivityInputBinding;
@@ -13,13 +15,17 @@ import com.example.inputconstraints.databinding.ActivityInputBinding;
 public class InputActivity extends AppCompatActivity {
 
     ActivityInputBinding b;
-
+    String input = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("Input");
         b = ActivityInputBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
+        if(savedInstanceState != null){
+            input = savedInstanceState.getString(Constant.RETURN_STRING, "");
+            b.inputTIL.getEditText().setText(input);
+        }
         setUpErrorForEditText();
     }
 
@@ -57,7 +63,7 @@ public class InputActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         String s = bundle.getString(Constant.STRING);
 
-        String input = b.inputTIL.getEditText().getText().toString().trim();
+        input = b.inputTIL.getEditText().getText().toString().trim();
         System.out.println("s : " + s);
         if(!input.matches(s)){
             //Toast.makeText(this, s, Toast.LENGTH_LONG).show();
@@ -70,6 +76,13 @@ public class InputActivity extends AppCompatActivity {
         intent.putExtra(Constant.RETURN_STRING, input);
         setResult(RESULT_OK,intent);
         finish();
+    }
+
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(Constant.RETURN_STRING, input);
     }
 
     /**
