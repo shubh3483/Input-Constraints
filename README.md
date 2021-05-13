@@ -15,4 +15,4 @@ Some screenshots of the app is attached below and the app APK could be found at 
 
 ![5](https://user-images.githubusercontent.com/65455693/116995866-41c18300-acf8-11eb-9521-d44e6615a49e.JPG)
 
-Download APK from here :https://github.com/shubh3483/Input-Constraints/releases/download/5.5.2/Input-Constraints.apk
+Download APK from here : https://github.com/shubh3483/Input-Constraints/releases/download/v5.5.3/Input-Constraints1.apk
